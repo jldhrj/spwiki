@@ -35,3 +35,6 @@ https://openhome.alipay.com/platform/keyManage.htm?keyType=partner
 #### 第四个位置： `$System_Config['merchant_private_key']`
 
 这个是你**自己的私钥**。
+
+教程不是特别详细我添加了一些截图（见下图连接）
+https://docs.google.com/document/d/1vlCrefQrW6WsuXbP0F5jAa3jeBnUbVHKbBRhsWD54M8/edit?usp=sharing
