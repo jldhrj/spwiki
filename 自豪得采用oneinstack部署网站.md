@@ -1,2 +1,8 @@
 BT面板拙计的MySQL优化会导致部署在512M小机上的站点数据库时常崩溃，打算造个用OIS部署的轮子——比lnmp和bt都更节约时间！
-To be continued...
+
+
+oneinstack环境包官方网站：https://oneinstack.com/
+访问这个网页 https://oneinstack.com/auto/ 来指定你需要的安装环境 （避免麻烦，这里给出一个此面板较为稳妥的部署方案)
+以root登录服务器，执行
+
+`wget http://mirrors.linuxeye.com/oneinstack-full.tar.gz && tar xzf oneinstack-full.tar.gz && ./oneinstack/install.sh --nginx_option 1 --php_option 5 --phpcache_option 1 --php_extensions zendguardloader,ioncube,imagick,gmagick --phpmyadmin  --db_option 3 --dbinstallmethod 1 --dbrootpwd root --pureftpd `
