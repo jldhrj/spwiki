@@ -10,6 +10,8 @@ https://www.you12580.us/sspanel-mod-%E9%AD%94%E6%94%B9%E7%89%88-%E4%BA%8C%E6%AC%
 
 2.我用的宝塔面板 安装参考 https://www.bt.cn/download/linux.html
 
-3.SSH安装 添加计划任务，输入 crontab -e 命令。这里如果不会使用请去宝塔里面直接改。地址是 /var/spool/cron/root
+3.SSH安装 添加计划任务，输入 crontab -e 命令。这里如果不会使用请去宝塔里面直接改。地址是 /var/spool/cron/root 修改里面对应的信息就行。
 
-4.导入数据库如果不会使用命令建议在宝塔里面操作 /www/wwwroot/你的网站目录/sql/glzjin_all.sql
+4.导入数据库如果不会使用命令建议在宝塔里面操作去这里 /www/wwwroot/你的网站目录/sql/glzjin_all.sql 下载到本地，然后在去phpadmin里面导入到数据库
+
+5.
