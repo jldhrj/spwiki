@@ -3,8 +3,8 @@ wiki参考https://github.com/zyl6698/ss-panel-v3-mod-with-f2fpay/wiki/%E5%AE%89%
 ### 安装面板程序
 web环境配置好后
 
-```
-cd /你的网站目录  例：cd /www/wwwroot/sspanel
+
+cd /你的网站目录  例：cd /www/wwwroot/你的网站目录
 apt update
 apt install git -y
 git clone -b master https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
