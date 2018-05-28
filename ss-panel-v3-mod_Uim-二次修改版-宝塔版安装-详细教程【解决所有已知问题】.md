@@ -1,0 +1,15 @@
+前端安装参考教程：https://www.you12580.us/sspanelv3%E4%BA%8C%E6%AC%A1%E4%BF%AE%E6%94%B9%E7%89%88%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%E5%8F%8A%E5%AE%89%E8%A3%85%E8%A7%86%E5%B1%8F%E6%95%99%E7%A8%8B%E3%80%90%E8%A7%A3%E5%86%B3%E6%89%80%E6%9C%89.html
+***
+后端对接参考教程：
+https://www.you12580.us/sspanel-mod-%E9%AD%94%E6%94%B9%E7%89%88-%E4%BA%8C%E6%AC%A1%E4%BF%AE%E6%94%B9%E7%89%88%E5%90%8E%E7%AB%AF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B-%E5%90%8E%E7%AB%AF%E8%BF%9C%E7%A8%8B%E8%8A%82%E7%82%B9.html
+
+我也很懒直接上链接
+个人安装参考
+
+1.我用的服务器是[VULTR的CentOS 7 x64-点我注册](https://www.vultr.com/?ref=7302976) 
+
+2.我用的宝塔面板 安装参考 https://www.bt.cn/download/linux.html
+
+3.SSH安装 添加计划任务，输入 crontab -e 命令。这里如果不会使用请去宝塔里面直接改。地址是 /var/spool/cron/root
+
+4.导入数据库如果不会使用命令建议在宝塔里面操作 /www/wwwroot/你的网站目录/sql/glzjin_all.sql
