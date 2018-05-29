@@ -36,5 +36,14 @@ https://openhome.alipay.com/platform/keyManage.htm?keyType=partner
 
 这个是你**自己的私钥**。
 
-教程不是特别详细我添加了一些截图（见下图连接）
+教程不是特别详细我（猫哥微信13013696367）添加了一些截图（见下图连接）
 https://docs.google.com/document/d/1vlCrefQrW6WsuXbP0F5jAa3jeBnUbVHKbBRhsWD54M8/edit?usp=sharing
+上面google doc 里面配置是对的，关于无法跳出二维码问题
+
+使用如下
+wget -N -P  /www/wwwroot/你网站目录/vendor/composer/ http://home.ustc.edu.cn/~mmmwhy/autoload_classmap.php
+然后在抱它里面操作
+从[/www/wwwroot/你网站目录/tool]批量复制到[/www/wwwroot/你网站目录/vendor]成功
+两个文件一个是alipay-f2fpay 一个是autoload_classmap.php 复制到到 vendor目录下就好了
+
+
