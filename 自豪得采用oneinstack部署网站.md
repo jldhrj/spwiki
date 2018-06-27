@@ -51,15 +51,15 @@ oneinstack默认的nginx安装目录可能会随版本更新而发生变化，�
 
 之后步骤与lnmp部署流程基本相同
 
-`php xcat createAdmin`          //创建管理员
+`php xcat createAdmin          //创建管理员`
 
-`php xcat syncusers`            //同步用户
+`php xcat syncusers           //同步用户`
 
-`php xcat initQQWry`            //下载IP解析库
+`php xcat initQQWry           //下载IP解析库`
 
-`php xcat resetTraffic`         //重置流量
+`php xcat resetTraffic        //重置流量`
 
-`php xcat initdownload `        //下载ssr程式
+`php xcat initdownload        //下载ssr程式`
 
 
 以及不要忘记安装crontab，并添加定时任务规则
