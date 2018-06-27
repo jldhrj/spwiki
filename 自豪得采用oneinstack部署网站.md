@@ -50,24 +50,17 @@ oneinstack默认的nginx安装目录可能会随版本更新而发生变化，�
 采用本教程部署的数据库用户名密码默认都为root ！！！！强烈建议在网站正常运行后进行更改！！！！！ // 通过http://IP/phpMyAdmin可以登录数据库，进行可视化的数据库操作。
 
 之后步骤与lnmp部署流程基本相同
-
-`php xcat createAdmin          //创建管理员`
-
-`php xcat syncusers           //同步用户`
-
-`php xcat initQQWry           //下载IP解析库`
-
-`php xcat resetTraffic        //重置流量`
-
-`php xcat initdownload        //下载ssr程式`
-
-
+```
+php xcat createAdmin          //创建管理员
+php xcat syncusers           //同步用户
+php xcat initQQWry           //下载IP解析库
+php xcat resetTraffic        //重置流量
+php xcat initdownload        //下载ssr程式
+```
 以及不要忘记安装crontab，并添加定时任务规则
-
-`30 22 * * * php /网站目录/xcat sendDiaryMail`
-
-`0 0 * * * php -n /网站目录/xcat dailyjob`
-
-`*/1 * * * * php /网站目录/xcat checkjob`
-
-`*/1 * * * * php /网站目录/xcat syncnode`
+```
+30 22 * * * php /网站目录/xcat sendDiaryMail
+0 0 * * * php -n /网站目录/xcat dailyjob
+*/1 * * * * php /网站目录/xcat checkjob
+*/1 * * * * php /网站目录/xcat syncnode
+```
