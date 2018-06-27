@@ -3,7 +3,7 @@
 1：使用qq邮箱发送方法
 
 1. 去qq邮箱开启smtp服务
-   ![img](http://www.wjl58.club/wp-content/uploads/2018/04/9_LV1N3XAPWH0@E6J.png)
+![img](http://www.wjl58.club/wp-content/uploads/2018/04/9_LV1N3XAPWH0@E6J.png)
 
 ![img](http://www.wjl58.club/wp-content/uploads/2018/04/DPY56ND2KQJRUSYT.png)
 
@@ -20,31 +20,44 @@
 2：以下功能需要开启
 
 //邮件设置———————————————————————–
-$System_Config[‘mailDriver’] = ‘smtp’; // mailgun or smtp or sendgrid 选择发送邮件的方式
+`$System_Config[‘mailDriver’] = ‘smtp’; // mailgun or smtp or sendgrid` 选择发送邮件的方式
 
 //邮箱验证
-$System_Config[‘enable_email_verify’]=‘true’; //是否启用注册邮箱验证码
+`$System_Config[‘enable_email_verify’]=‘true’; //`是否启用注册邮箱验证码
 
 3：配置smtp参数，以下为smtp格式填写正确即可发送邮箱（以qq邮箱为例子vu等不封端口的服务器可用）
 
 \# smtp
-$System_Config[‘smtp_host’] = ‘smtp.qq.com’;
-$System_Config[‘smtp_username’] = ‘你的qq号@qq.com’;
-$System_Config[‘smtp_port’]= ‘465’;
-$System_Config[‘smtp_name’] = ‘发送名’;
-$System_Config[‘smtp_sender’] = ‘你的qq号@qq.com’;
-$System_Config[‘smtp_passsword’] = ‘刚才生成的授权码’;
-$System_Config[‘smtp_ssl’] = ‘true’;
+`$System_Config[‘smtp_host’] = ‘smtp.qq.com’;
+
+`$System_Config[‘smtp_username’] = ‘你的qq号@qq.com’;``
+
+`$System_Config[‘smtp_port’]= ‘465’;`
+
+`$System_Config[‘smtp_name’] = ‘发送名’;`
+
+`$System_Config[‘smtp_sender’] = ‘你的qq号@qq.com’;`
+
+`$System_Config[‘smtp_passsword’] = ‘刚才生成的授权码’;`
+
+`$System_Config[‘smtp_ssl’] = ‘true’;`
 
 再来个例子
 
-$System_Config['smtp_host'] = ''; //SMTP服务器地址
-$System_Config['smtp_username'] = ''; //发信人邮件地址
-$System_Config['smtp_port'] = ''; //SMTP服务器端口
-$System_Config['smtp_name'] = ''; //发信人昵称
-$System_Config['smtp_sender'] = ''; //发信人邮件地址
-$System_Config['smtp_passsword'] = ''; //发信人邮箱登录密码/授权码
-$System_Config['smtp_ssl'] = ''; //SMTP服务器SSL设置
+`$System_Config['smtp_host'] = ''; //SMTP服务器地址`
+
+`$System_Config['smtp_username'] = ''; //发信人邮件地址`
+
+`$System_Config['smtp_port'] = ''; //SMTP服务器端口`
+
+`$System_Config['smtp_name'] = ''; //发信人昵称`
+
+`$System_Config['smtp_sender'] = ''; //发信人邮件地址`
+
+`$System_Config['smtp_passsword'] = ''; //发信人邮箱登录密码/授权码`
+
+`$System_Config['smtp_ssl'] = ''; //SMTP服务器SSL设置`
+
 这样就可以发信了来张示例图
 
 ![img](http://www.wjl58.club/wp-content/uploads/2018/04/7IT018O_BLJ3LR26E33.png)
@@ -76,13 +89,20 @@ gmail如下填即可，一定要记住使用587端口（gcp）
 
 2：配置样板
 # smtp
-$System_Config['smtp_host'] = 'smtp.gmail.com';
-$System_Config['smtp_username'] = '你的gmail邮箱@gmail.com';
-$System_Config['smtp_port'] = '587';
-$System_Config['smtp_name'] = '发送名与qq邮箱一样';
-$System_Config['smtp_sender'] = '你的gmail邮箱@gmail.com';
-$System_Config['smtp_passsword'] = '你的gmail邮箱密码';
-$System_Config['smtp_ssl'] = 'true';
+`$System_Config['smtp_host'] = 'smtp.gmail.com';`
+
+`$System_Config['smtp_username'] = '你的gmail邮箱@gmail.com';`
+
+`$System_Config['smtp_port'] = '587';`
+
+`$System_Config['smtp_name'] = '发送名与qq邮箱一样';`
+
+`$System_Config['smtp_sender'] = '你的gmail邮箱@gmail.com';`
+
+`$System_Config['smtp_passsword'] = '你的gmail邮箱密码';`
+
+`$System_Config['smtp_ssl'] = 'true';`
+
 现在应该就可以发了，来试试![img](http://www.wjl58.club/wp-content/uploads/2018/04/ZPN1F4J9HT1R_CL-169x300.png)
 
 自此gcp谷歌服务器也终于可以发邮件了，完结撒花！！！！
