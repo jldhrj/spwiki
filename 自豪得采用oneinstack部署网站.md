@@ -23,15 +23,9 @@ oneinstack环境包官方网站：https://oneinstack.com/
 
 `cd root/oneinstack`
 
-执行其中一个脚本
-
-`./addons.sh`
-
-这个脚本用于添加额外的模块，这里在弹出的选项中我们选择 7.Let's Encrypt 证书申请 （为了使你的网站更安全,SSL证书是不可或缺的）
-
 安装完成后，继续执行
 
-`./vhost.sh`新建虚拟主机，这里详细步骤就不再赘述了，跟lnmp部署流程中基本相同（记得选用默认的伪静态规则，经过测试用wordpress的伪静态规则可以让网站程序正常运行）
+`./vhost.sh`新建虚拟主机，选择传输协议为https并使用let's encrypt证书这里详细步骤就不再赘述了，跟lnmp部署流程中基本相同（记得选用默认的伪静态规则，经过测试用wordpress的伪静态规则可以让网站程序正常运行），如果同时安装了apache和nginx，需要配置apache的伪静态规则。
 
 部署完毕以后，根目录中会多出一个data文件夹，所有的网站数据都在这个目录下。
 现在开始拉取网站程序
@@ -41,15 +35,18 @@ oneinstack环境包官方网站：https://oneinstack.com/
 `chown -R root:root ./* && chmod -R 755 ./* && chown -R www:www storage`
 
 在当前目录下执行，并稍等片刻
-
-`php composer.phar install`
-
+```
+php composer.phar install
+mv tool/alipay-f2fpay vendor/
+mv -f tool/cacert.pem vendor/guzzle/guzzle/src/Guzzle/Http/Resources/
+mv -f tool/autoload_classmap.php vendor/composer/
+```
 oneinstack默认的nginx安装目录可能会随版本更新而发生变化，因此建议通过 whereis 命令自行查找，找到安装目录下的vhost/www.你的域名.com.conf 文件，将 `root /data/wwwroot/你的域名;` 修改为 `root/data/wwwroot/你的域名/public;`
 
 之后，修改网站目录下 config 文件夹里面的内容来对接数据库
 采用本教程部署的数据库用户名密码默认都为root ！！！！强烈建议在网站正常运行后进行更改！！！！！ // 通过http://IP/phpMyAdmin可以登录数据库，进行可视化的数据库操作。
 
-之后步骤与lnmp部署流程基本相同
+之后步骤与lnmp部署流程基本相同 
 ```
 php xcat createAdmin          //创建管理员
 php xcat syncusers           //同步用户
@@ -57,7 +54,8 @@ php xcat initQQWry           //下载IP解析库
 php xcat resetTraffic        //重置流量
 php xcat initdownload        //下载ssr程式
 ```
-以及不要忘记安装crontab，并添加定时任务规则
+以及不要忘记安装crontab，并添加定时任务规则,但是oneinstack需要设置php的环境路径，否则定时任务无法执行。
+建立软链到环境变量   `ln -s /usr/local/php/bin/php /usr/bin/php`       
 ```
 30 22 * * * php /网站目录/xcat sendDiaryMail
 0 0 * * * php -n /网站目录/xcat dailyjob
