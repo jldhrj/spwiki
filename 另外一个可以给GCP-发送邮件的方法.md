@@ -1,5 +1,5 @@
 就这样设置吧如果想知道怎么样注册网上应该有教程
-
+必须要用mailgun其他的没有测试过 https://www.mailgun.com/
 # smtp
 `$System_Config['smtp_host'] = 'smtp.mailgun.org';`
 
