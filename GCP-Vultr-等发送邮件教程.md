@@ -107,3 +107,22 @@ gmail如下填即可，一定要记住使用587端口（gcp）
 现在应该就可以发了，来试试![img](http://www.wjl58.club/wp-content/uploads/2018/04/ZPN1F4J9HT1R_CL-169x300.png)
 
 自此gcp谷歌服务器也终于可以发邮件了，完结撒花！！！！
+
+
+另外一个可以用mailgun 在gcp服务器上发邮件
+就这样设置吧如果想知道怎么样注册网上应该有教程 必须要用mailgun其他的没有测试过 https://www.mailgun.com/
+
+smtp
+$System_Config['smtp_host'] = 'smtp.mailgun.org';
+
+$System_Config['smtp_username'] = 'mailgun smtp的邮箱';
+
+$System_Config['smtp_port'] = '2525'; 必须得是2525其他都不可以！！！！
+
+$System_Config['smtp_name'] = '就是你网站的名字吧';
+
+$System_Config['smtp_sender'] = 'mailgun smtp的邮箱';
+
+$System_Config['smtp_passsword'] = '你的mailgun Smtp 密码';
+
+$System_Config['smtp_ssl'] = 'false'; 必须得是false不知道为什么感觉很怪
