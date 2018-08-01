@@ -19,7 +19,7 @@ CentOS 7
 
 ### 食用  
 
-安裝過程中按照脚本提示分別輸入'database server's IP address','DB name','DB username','DB password','Server node ID'即可。  
+安裝過程中按照脚本提示分別輸入'DB server's IP address','DB name','DB username','DB password','Server node ID'即可。  
 如果之前運行過此脚本請先執行  
 `\rm -rf /soft/shadowsocks`  
 方可避免安裝位置錯誤的問題
