@@ -1,4 +1,4 @@
-本教程转载自 [vinga 的博客](https://vinga.tech/ssrmu/)，已获作者授权
+本教程转载自 [VINGA 的博客](https://vinga.tech/ssrmu/)，已获作者授权
  > 市面上有很多一键部署sspanel v3 mod后端的脚本.但要么不太好使.要么有使用条件.而且安装时间也比较长.于是做了个docker.利用HyperApp即可一键解决
 
 ### 更新记录
@@ -46,19 +46,18 @@ FAST_OPEN=fals
 
 ```
 docker version > /dev/null || curl -fsSL get.docker.com | bash
-docker pull fanvinga/docker-ssrmu
 ```
 
 **webapi** 方式对接:
 
 ```
-docker run -d --name=vinga -e NODE_ID=节点ID -e API_INTERFACE=modwebapi -e WEBAPI_URL=需要对接的地址 -e WEBAPI_TOKEN=前端设置的token --network=host --restart=always fanvinga/docker-ssrmu
+docker run -d --name=ssrmu -e NODE_ID=节点ID -e API_INTERFACE=modwebapi -e WEBAPI_URL=需要对接的地址 -e WEBAPI_TOKEN=前端设置的token --network=host --log-opt max-size=50m --log-opt max-file=3 --restart=always fanvinga/docker-ssrmu
 ```
 
 **数据库**方式对接：
 
 ```
-docker run -d --name=vinga -e NODE_ID=节点ID -e API_INTERFACE=glzjinmod -e MYSQL_HOST=MYSQL地址 -e MYSQL_USER=mysql用户名 - MYSQL_DB=数据库名 --network=host --restart=always fanvinga/docker-ssrmu
+docker run -d --name=ssrmu -e NODE_ID=节点ID -e API_INTERFACE=glzjinmod -e MYSQL_HOST=MYSQL地址 -e MYSQL_USER=mysql用户名 - MYSQL_DB=数据库名 --network=host --log-opt max-size=50m --log-opt max-file=3 --restart=always fanvinga/docker-ssrmu
 ```
 
 这样就对接完成了，如果对接不成功，可以查看 log 进行排错（见下方 docker 常见命令）
@@ -93,5 +92,9 @@ docker logs -f dockername
 #查看选定 docker 的 log
 docker rm -f dockername
 #删除指定 docker
+docker system df
+#查看容器使用的磁盘空间
+docker system prune -a
+#对 docker 进行全面垃圾回收
 ```
 
