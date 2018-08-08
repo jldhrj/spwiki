@@ -13,11 +13,6 @@
 - 2017.12.18:压缩了镜像.
 - 2017.11.21:增加glzjinmod的链接方式
 
-### 准备
-
-- HyperApp
-- 耐心.仔细.认真
-
 ### 环境变量
 
 ```
@@ -42,7 +37,7 @@ FAST_OPEN=fals
 
 ### 普通配置:
 
-安装 docker 并配置镜像
+安装 docker
 
 ```
 docker version > /dev/null || curl -fsSL get.docker.com | bash
