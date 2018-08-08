@@ -3,7 +3,7 @@
 # V2ray Backend 用法
 ## 站点设定
 首先先在 后台创建节点
-> 节点的节点地址为 域名;端口;协议;AlterId;Level
+> 节点的节点地址为 域名;端口;协议;AlterId;Level;(网络层协议 默认 tcp)
 
 事实上在默认情况下 协议为 VMess 端口为 443 AlterId 为 32 Level 为 0
 
