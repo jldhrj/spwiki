@@ -127,3 +127,17 @@ $System_Config['smtp_sender'] = 'mailgun smtp的邮箱';
 $System_Config['smtp_passsword'] = '你的mailgun Smtp 密码';
 
 $System_Config['smtp_ssl'] = 'false'; 必须得是false不知道为什么感觉很怪
+
+##Sendgrid 使用smtp发送邮件
+点控制面板左边的Sender Authentication，按照提示在DNS解析商那边添加CNAME验证域名
+```
+$System_Config['smtp_host'] = 'smtp.sendgrid.net';
+$System_Config['smtp_username'] = 'sendgrid用户名（就是登录sendgrid网页时候填的那个）';
+$System_Config['smtp_port'] = '465';
+$System_Config['smtp_name'] = '填下面你填在Reply to的邮箱';
+$System_Config['smtp_sender'] = '就随便起个名（比如admin.rutou.com）';
+$System_Config['smtp_passsword'] = 'sendgrid密码（就是你登陆sendgrid网页的密码）';
+$System_Config['smtp_ssl'] = 'true';
+```
+点控制面板左边的Senders,再点右边的Create New Sender
+![img](https://puu.sh/BrPsL/2524615018.jpg)
