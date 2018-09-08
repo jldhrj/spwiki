@@ -128,7 +128,8 @@ $System_Config['smtp_passsword'] = '你的mailgun Smtp 密码';
 
 $System_Config['smtp_ssl'] = 'false'; 必须得是false不知道为什么感觉很怪
 
-##Sendgrid 使用smtp发送邮件
+## Sendgrid 使用smtp发送邮件
+
 点控制面板左边的Sender Authentication，按照提示在DNS解析商那边添加CNAME验证域名
 ```
 $System_Config['smtp_host'] = 'smtp.sendgrid.net';
