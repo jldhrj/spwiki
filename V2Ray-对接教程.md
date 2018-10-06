@@ -36,7 +36,12 @@ nano agent.yaml
 ```yaml
 mod:
   nodeId: 节点ID
+  # 仅在 web API 接入时启用
   key: 通信密钥
+# 仅在数据库接入时启用
+database:
+  user: 数据库用户名
+  pass: 数据库密码
 ```
 
 V2Ray 可用的选项为
