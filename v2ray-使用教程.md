@@ -16,7 +16,7 @@
 | 使用方式协议 | 网络层协议 | 附加协议 | 是否支持自动设定后端 | 设定方式 | 
 | --- |-------------| ---| -----| --- |
 | TCP | tcp / 无 | 无 | ✅ | N/A |
-| KCP | kcp | ✅ | N/A |
+| KCP | kcp | 无 | ✅ | N/A |
 | KCP | kcp | wechat-video 等 | ✅ | N/A |
 | TLS | tls | 无 | ❌ | 将自己的证书部署至服务器之后自行修改 config.json |
 | Websocket | ws | 无 | ❌ | 在额外参数中增加 `path=/` 之后自行修改 config.json |
