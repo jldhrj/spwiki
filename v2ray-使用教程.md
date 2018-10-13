@@ -21,10 +21,6 @@
 | TLS | tls | 无 | ❌ | 将自己的证书部署至服务器之后自行修改 config.json |
 | Websocket | ws | 无 | ❌ | 在额外参数中增加 `path=/` 之后自行修改 config.json |
 | TLS + Websocket | tls | ws | ❌ | 参考 tls 和 websocket 的配置方法进行配置 | 
-> 这些设置可以在 config.json 中修改
-
-![Snipaste_2018-05-06_15-50-40.png](https://i.loli.net/2018/05/06/5aeeb3df9be7e.png)
-
 
 > 单端口多用户请选择 只启用普通端口
 
