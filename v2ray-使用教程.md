@@ -3,18 +3,24 @@
 # V2ray Backend 用法
 ## 站点设定
 首先先在 后台创建节点
-> 节点的节点地址为 域名;端口;AlterId;网络层协议(默认 tcp);附加协议;自定义 ID
+> 节点的节点地址为 域名;端口;AlterId;网络层协议(默认 tcp);附加协议;额外参数
 
 事实上在默认情况下 端口为 443 AlterId 为 2. 其中, 在 网络层协议之后的内容可以省略
 
-## 使用 v2ray 的伪装方式以及设定方式
-| 网络层协议 | 附加协议 | 是否支持自动设定后端 | 设定方式 | 
-| ------------- |-------------| -----| --- |
-| TCP | 无 | ✅ | N/A |
-| KCP | 无 | ✅ | N/A |
-| KCP | wechat-video 等 header 伪装 | ✅ | N/A |
-| TLS | 无 | ❌ | 将自己的证书部署至服务器之后自行修改 config.json |
+## 额外参数的格式
+额外参数使用 `key=value|another=vale` 这种格式来书写
 
+额外参数中的内容将会 merge 进入 config.json 当中
+
+## 使用 v2ray 的伪装方式以及设定方式
+| 使用方式协议 | 网络层协议 | 附加协议 | 是否支持自动设定后端 | 设定方式 | 
+| --- |-------------| -----| --- |
+| TCP | tcp / 无 | 无 | ✅ | N/A |
+| KCP | kcp | ✅ | N/A |
+| KCP | kcp | wechat-video 等 | ✅ | N/A |
+| TLS | tls | 无 | ❌ | 将自己的证书部署至服务器之后自行修改 config.json |
+| Websocket | ws | 无 | ❌ | 在额外参数中增加 `path=/` 之后自行修改 config.json |
+| TLS + Websocket | tls | ws | ❌ | 参考 tls 和 websocket 的配置方法进行配置 | 
 > 这些设置可以在 config.json 中修改
 
 ![Snipaste_2018-05-06_15-50-40.png](https://i.loli.net/2018/05/06/5aeeb3df9be7e.png)
