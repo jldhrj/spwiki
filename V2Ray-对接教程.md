@@ -15,11 +15,6 @@
 | KCP | wechat-video 等 header 伪装 | ✅ |
 | TLS | 无 | ❌ |
 
-作者：larryzhao
-链接：https://www.jianshu.com/p/sTeAbC
-來源：简书
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
-
 > 这些设置可以在 config.json 中修改
 
 ![Snipaste_2018-05-06_15-50-40.png](https://i.loli.net/2018/05/06/5aeeb3df9be7e.png)
