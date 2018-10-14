@@ -19,7 +19,7 @@
 | KCP | kcp | 无 | ✅ | N/A |
 | KCP | kcp | wechat-video 等 | ✅ | N/A |
 | TLS | tls | 无 | ❌ | 将自己的证书部署至服务器之后自行修改 config.json |
-| Websocket | ws | 无 | ❌ | 在额外参数中增加 `path=/` 之后自行修改 config.json |
+| Websocket | ws | 无 | ✅ | N/A, 可以在 extraArgs 增加 PATH 设定 |
 | TLS + Websocket | tls | ws | ❌ | 参考 tls 和 websocket 的配置方法进行配置 | 
 
 > 单端口多用户请选择 只启用普通端口
