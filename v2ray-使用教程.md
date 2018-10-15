@@ -66,3 +66,18 @@ v2ray:
   alterId: 用户的 alterId
   tag: 传入协议的 Tag (默认为 proxy)
 ```
+
+## 使用 Docker 运行
+您可以使用以下 Dockerfile 来构建您的 Docker Image
+```dockerfile
+FROM bitnami/minideb
+LABEL maintainer="Indexyz <docker@indexyz.me>"
+
+COPY agent /
+RUN chmod +x /agent
+
+ENTRYPOINT ["/agent"]
+```
+
+将获取到的后端命名为 `agent` 放在这个文件夹, 使用 `docker build -t v2ray-agent .` 来构建您的 Image
+然后使用 `docker run -p 443:443 -d --name v2ray v2ray-agent` 来运行
