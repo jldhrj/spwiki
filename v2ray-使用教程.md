@@ -32,7 +32,7 @@
 
 并将节点类型选为 `V2Ray`
 
-> 使用 [WHMCS](https://whmcs.indexyz.me/aff.php?aff=1) 购买 
+> 使用 [WHMCS](https://whmcs.indexyz.me/aff.php?aff=1) 购买后端
 
 > 在 2018/10/31 日前购买可使用优惠码 `VM1HFY3KY3`
 
