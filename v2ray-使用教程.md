@@ -32,9 +32,9 @@
 
 并将节点类型选为 `V2Ray`
 
-> 联系 Telegram [账户](https://t.me/nttisthebest) 获取后端, 后端为付费获取
+```> 联系 Telegram [账户](https://t.me/nttisthebest) 获取后端, 后端为付费获取```
 
-> 或者使用 [WHMCS](https://whmcs.indexyz.me/cart.php?a=confproduct&i=1) 购买
+> 或者使用 [WHMCS](https://whmcs.indexyz.me/aff.php?aff=1) 购买
 
 > 在 2018/10/31 日前购买可使用优惠码 VM1HFY3KY3
 
