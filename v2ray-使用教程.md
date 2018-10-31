@@ -52,12 +52,11 @@ nano agent.yaml
 编辑 `agent.yaml` (如果没有就新建一个)
 其中的内容为
 ```yaml
-mod:
+mod: # 仅在 web API 接入时启用
   nodeId: 节点ID
-  # 仅在 web API 接入时启用
   key: 通信密钥
-# 仅在数据库接入时启用
-database:
+
+database: # 仅在数据库接入时启用
   user: 数据库用户名
   pass: 数据库密码
 ```
