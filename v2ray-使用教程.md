@@ -50,9 +50,9 @@ nano agent.yaml
 编辑 `agent.yaml` (如果没有就新建一个)
 其中的内容为
 ```yaml
-mod: # 仅在 web API 接入时启用
+mod:
   nodeId: 节点ID
-  key: 通信密钥
+  key: 通信密钥   # 仅在 web API 接入时启用
 
 database: # 仅在数据库接入时启用
   user: 数据库用户名
