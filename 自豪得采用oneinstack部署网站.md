@@ -37,9 +37,7 @@ oneinstack环境包官方网站：https://oneinstack.com/
 在当前目录下执行，并稍等片刻
 ```
 php composer.phar install
-mv tool/alipay-f2fpay vendor/
-mv -f tool/cacert.pem vendor/guzzle/guzzle/src/Guzzle/Http/Resources/
-mv -f tool/autoload_classmap.php vendor/composer/
+
 ```
 oneinstack默认的nginx安装目录可能会随版本更新而发生变化，因此建议通过 whereis 命令自行查找，找到安装目录下的vhost/www.你的域名.com.conf 文件，将 `root /data/wwwroot/你的域名;` 修改为 `root/data/wwwroot/你的域名/public;`
 
