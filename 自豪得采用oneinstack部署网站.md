@@ -56,6 +56,7 @@ php xcat initdownload        //下载ssr程式
 ```
 以及不要忘记安装crontab，并添加定时任务规则,但是oneinstack需要设置php的环境路径，否则定时任务无法执行。
 建立软链到环境变量   `ln -s /usr/local/php/bin/php /usr/bin/php`       
+oneinstack面板的自动备份会备份空文件，需要建立mysqldump的软链接 `ln -s /usr/local/mysql/bin/mysqldump /usr/bin/mysqldump`
 ```
 30 22 * * * php /网站目录/xcat sendDiaryMail
 0 0 * * * php -n /网站目录/xcat dailyjob
