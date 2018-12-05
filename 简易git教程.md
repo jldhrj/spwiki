@@ -3,7 +3,7 @@
 ```
 git log //查看本项目修改记录
 
-然后你可以看到commit xxxxxxxxxxxxxx
+//然后你可以看到commit xxxxxxxxxxxxxx
 ```
 
 ```
@@ -14,14 +14,16 @@ git pull  //git fetch+git merge
 
 ```
 //如果需要保存自己的本地修改,首先cd到网站目录
+
 git add /xxx/xxx（要修改的文件的路径，比如./resources/views/material/user/index.tpl，多个文件空格隔开）
 git commit -m "xxx"（xxx为本次修改的内容，自己备注）
 
-之后git pull就不会提示你还有内容没提交，可以正常git pull,除非你的本地修改和更新内容冲突需要手动解决冲突
+//之后git pull就不会提示你还有内容没提交，可以正常git pull,除非你的本地修改和更新内容冲突需要手动解决冲突
 ```
 
 ```
 //另一种办法使用stash
+
 git stash //暂存本地所有修改过的内容，然后就可以正常git pull
 git stash apply  //将暂存的本地修改恢复
 ```
