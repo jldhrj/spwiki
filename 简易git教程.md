@@ -31,3 +31,5 @@ git stash apply  //将暂存的本地修改恢复
 ```
 git reset xxxxxxxxx（xxxxx就是你git log后看到的某次修改的commit xxxxxxxxxxx，将本地文件重置到此次修改的状态）
 ```
+
+还不会就自己找个git教程按视频好好学学
