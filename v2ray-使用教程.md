@@ -81,4 +81,4 @@ ENTRYPOINT ["/agent"]
 将获取到的后端命名为 `agent` 放在这个文件夹, 使用 `docker build -t v2ray-agent .` 来构建您的 Image
 然后使用 `docker run -p 443:443 -d --name v2ray v2ray-agent` 来运行
 
-> 为数据库方式作了专门的配置项支持, 如果有一个为 mod.nodeId 的配置项, 会自动从 MOD_NODEID 这个环境变量读取值
+> 为 Docker 运行的方式作了专门的配置项支持, 如果有一个为 mod.nodeId 的配置项, 会自动从 MOD_NODEID 这个环境变量读取值
