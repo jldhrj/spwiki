@@ -1,3 +1,7 @@
+## 配置注意点：
+1. 务必确保用户邮箱格式正确
+2. host自己设定的时候，别设定成被墙的网址。
+3. 有bug 可以tg 联系 @ricobb 或者[项目](https://github.com/rico93/shadowsocks-munager.git) 提交issue。 
 ## 项目状态
 
 目前只适配了流量记录、服务器是否在线、在线人数、负载、Speedtest 后端测速、延迟、后端根据前端的设定自动调用 API 增加用户。
