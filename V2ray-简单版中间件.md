@@ -1,3 +1,12 @@
+## 新Go版测试
+### 安装命令
+~~~
+curl -L -o ./go.sh https://raw.githubusercontent.com/rico93/v2ray-core/4.12.0_ips/release/install-release.sh && bash ./go.sh -f --version 4.12.0 --panelurl xxx --panelkey xxx --nodeid xxx
+~~~
+### 面板配置方式和py版本一样
+### 特点
+和之前一样，目前直接编译和v2打包了。 内存占用比py的小。 没有测速。 加了ip上报。 （可能有未知bug，赶工写的，写的晕晕乎乎）
+
 ## 配置注意点：
 1. 务必确保用户邮箱格式正确
 2. host自己设定的时候，别设定成被墙的网址。
