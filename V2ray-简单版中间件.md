@@ -1,7 +1,8 @@
 ## 新Go版测试
 ### 安装命令
 ~~~
-curl -L -o ./go.sh https://raw.githubusercontent.com/rico93/v2ray-core/4.12.0_ips/release/install-release.sh && bash ./go.sh -f --version 4.12.0 --panelurl xxx --panelkey xxx --nodeid xxx
+curl -L -o ./go.sh https://raw.githubusercontent.com/rico93/v2ray-core/4.12.0_ips/release/install-release.sh && \
+bash ./go.sh -f --version 4.12.0 --panelurl xxx --panelkey xxx --nodeid xxx
 ~~~
 ### 面板配置方式和py版本一样
 ### 特点
