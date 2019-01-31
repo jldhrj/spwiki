@@ -6,7 +6,7 @@ bash ./go.sh -f --version 4.12.0 --panelurl xxx --panelkey xxx --nodeid xxx
 ~~~
 Docker-compose 版本 
 
-~~~
+
 ~~~
 mkdir v2ray-agent  &&  \
 cd v2ray-agent && \
@@ -14,7 +14,7 @@ curl https://raw.githubusercontent.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/in
 chmod +x install.sh && \
 bash install.sh
 ~~~
-~~~
+
 ### 面板配置方式和py版本一样
 ### 特点
 和之前一样，目前直接编译和v2打包了。 内存占用比py的小。 没有测速。 加了ip上报。 （可能有未知bug，赶工写的，写的晕晕乎乎）
