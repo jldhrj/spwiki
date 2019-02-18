@@ -1,4 +1,4 @@
-# v2ray-sspanel-v3-mod_Uim-plugin
+# [v2ray-sspanel-v3-mod_Uim-plugin](https://github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin)
 
 # 划重点
 1. 用户务必保证，host 务必填写没有被墙的地址
