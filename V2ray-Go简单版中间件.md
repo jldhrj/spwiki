@@ -119,10 +119,15 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 Ubuntu 18.04 魔改 BBR 暂时有点问题，可使用以下命令安装：
 
 ~~~
-wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"
-apt install make gcc -y
-sed -i 's#/usr/bin/gcc-4.9#/usr/bin/gcc#g' '/root/tcp.sh'
-chmod +x tcp.sh && ./tcp.sh
+modprobe tcp_bbr
+echo "tcp_bbr" >> /etc/modules-load.d/modules.conf
+echo 3 > /proc/sys/net/ipv4/tcp_fastopen
+echo "vm.swappiness = 10" >> /etc/sysctl.conf
+echo "vm.vfs_cache_pressure = 50" >> /etc/sysctl.conf
+echo "net.core.default_qdisc = fq_codel" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_fastopen = 3" >> /etc/sysctl.conf
+sysctl -p
 ~~~
 ### [可选] 增加swap
 整数是M
