@@ -1,5 +1,5 @@
 # [v2ray-sspanel-v3-mod_Uim-plugin](https://github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin)
-目前 收费版本相对免费版本 增加了用户限速
+目前 收费版本相对免费版本 增加了用户限速， 购买请tg @ricobb
 # 划重点
 1. 用户务必保证，host 务必填写没有被墙的地址
 
