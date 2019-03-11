@@ -30,7 +30,7 @@ oneinstack环境包官方网站：https://oneinstack.com/
 部署完毕以后，根目录中会多出一个data文件夹，所有的网站数据都在这个目录下。
 现在开始拉取网站程序
 
-`git clone -b master https://github.com/NimaQu/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard `
+`git clone -b master https://github.com/Anankke/ss-panel-v3-mod_Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard `
 
 `chown -R root:root ./* && chmod -R 755 ./* && chown -R www:www storage`
 
