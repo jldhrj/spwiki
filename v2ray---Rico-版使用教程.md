@@ -1,5 +1,5 @@
 # [v2ray-sspanel-v3-mod_Uim-plugin](https://github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin)
-目前 收费版本相对免费版本 增加了用户限速，ss协议这里对ws(tls)的支持(可以做到单端口）,tls自动配置 购买点击 [@Rico_V2_bot](https://t.me/Rico_V2_bot?start=bi7on6c4uuu9t8sn1bq0)
+目前 收费版本，支持用户限速，ss协议这里对ws(tls)的支持(可以做到单端口）,tls自动配置 购买点击 [@Rico_V2_bot](https://t.me/Rico_V2_bot?start=bi7on6c4uuu9t8sn1bq0)
 # 划重点
 1. 用户务必保证，host 务必填写没有被墙的地址
 
@@ -14,7 +14,7 @@ v2ray 后端 kcp、tcp、ws 都是多用户共用一个端口。
 也可作为 ss 后端一个用户一个端口。
 
 ## 已知 Bug
-
+1. 自动获取tls，会占用80端口，且在获取时不能走cdn
 ## 作为 ss 后端
 
 面板配置是节点类型为 Shadowsocks，普通端口。
@@ -35,26 +35,23 @@ v2ray 后端 kcp、tcp、ws 都是多用户共用一个端口。
 
 支持 tcp,kcp、ws+(tls 由镜像 Caddy或者ngnix 提供,默认是443接口哦)。或者自己调整。
 
-[面板设置说明 主要是这个](https://github.com/NimaQu/ss-panel-v3-mod_Uim/wiki/v2ray-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
-
 ~~~
 没有CDN的域名或者ip;端口（外部链接的);AlterId;协议层;;额外参数(path=/v2ray|host=xxxx.win|inside_port=10550这个端口内部监听))
 
 // ws 示例
-xxxxx.com;10550;16;ws;;path=/v2ray|host=oxxxx.com
+xxxxx.com;10550;4;ws;;path=/v2ray|host=oxxxx.com
 
 // ws + tls (Caddy 提供)
-xxxxx.com;0;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550
-xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550
-
+xxxxx.com;0;4;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550
+xxxxx.com;;4;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550
 
 
 // nat🐔 ws 示例
-xxxxx.com;11120;16;ws;;path=/v2ray|host=oxxxx.com
+xxxxx.com;11120;4;ws;;path=/v2ray|host=oxxxx.com
 
 // nat🐔 ws + tls (Caddy 提供)
-xxxxx.com;0;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550|outside_port=11120
-xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550|outside_port=11120
+xxxxx.com;0;4;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550|outside_port=11120
+xxxxx.com;;4;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550|outside_port=11120
 ~~~
 
 目前的逻辑是
@@ -68,7 +65,7 @@ xxxxx.com;;16;tls;ws;path=/v2ray|host=oxxxx.com|inside_port=10550|outside_port=1
 tcp 配置：
 
 ~~~
-xxxxx.com;非0;16;tcp;;
+xxxxx.com;非0;4;tcp;;
 ~~~
 
 kcp 支持所有 v2ray 的 type：
@@ -76,37 +73,37 @@ kcp 支持所有 v2ray 的 type：
 - none: 默认值，不进行伪装，发送的数据是没有特征的数据包。
 
 ~~~
-xxxxx.com;非0;16;kcp;noop;
+xxxxx.com;非0;4;kcp;noop;
 ~~~
 
 - srtp: 伪装成 SRTP 数据包，会被识别为视频通话数据（如 FaceTime）。
 
 ~~~
-xxxxx.com;非0;16;kcp;srtp;
+xxxxx.com;非0;4;kcp;srtp;
 ~~~
 
 - utp: 伪装成 uTP 数据包，会被识别为 BT 下载数据。
 
 ~~~
-xxxxx.com;非0;16;kcp;utp;
+xxxxx.com;非0;4;kcp;utp;
 ~~~
 
 - wechat-video: 伪装成微信视频通话的数据包。
 
 ~~~
-xxxxx.com;非0;16;kcp;wechat-video;
+xxxxx.com;非0;4;kcp;wechat-video;
 ~~~
 
 - dtls: 伪装成 DTLS 1.2 数据包。
 
 ~~~
-xxxxx.com;非0;16;kcp;dtls;
+xxxxx.com;非0;4;kcp;dtls;
 ~~~
 
 - wireguard: 伪装成 WireGuard 数据包(并不是真正的 WireGuard 协议) 。
 
 ~~~
-xxxxx.com;非0;16;kcp;wireguard;
+xxxxx.com;非0;4;kcp;wireguard;
 ~~~
 
 ### [可选] 安装 BBR
