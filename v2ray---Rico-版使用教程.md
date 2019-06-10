@@ -65,7 +65,7 @@ docker run -d --name=xxxx \
 -e speedtest=0  -e api_port=2333 -e PANELTYPE=0 -e usemysql=0 -e downWithPanel=0 \
 -e node_id=73 -e sspanel_url=https://xxxx.com -e key=NimaQu   -e MYSQLHOST="https://bing.com" 
 -e MYSQLDBNAME="demo_dbname" -e MYSQLUSR="demo_user" -e MYSQLPASSWD="demo_dbpassword" -e MYSQLPORT=3306 \
---net=bridge -p 51201:51201/tcp -p 51201:51201/udp --restart=always \
+--net=bridge -p 51201:51201/tcp -p 51201:51201/udp  -p 80:80/tcp -p 80:80/udp --restart=always \
 --memory="300m"  --memory-swap="1g" rico93/v2ray_v3:go_pay_test
 ```
 链接配置可选变量组 变量解释
