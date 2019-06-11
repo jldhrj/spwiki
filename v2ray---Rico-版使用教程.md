@@ -3,6 +3,8 @@ Welcome to the v2ray-sspanel-v3-mod_Uim-plugin wiki!
 
 收费版本(不在提供源码，只提供二进制文件，需要联系使用[bot购买](https://t.me/Rico_V2_bot))
 
+更加及时的更新wiki 请看这里 [wiki](https://github.com/rico93/pay-v2ray-sspanel-v3-mod_Uim-plugin/wiki)
+
 ## 项目状态
 
 支持 [ss-panel-v3-mod_Uim](https://github.com/NimaQu/ss-panel-v3-mod_Uim)，使用 WEBAPI 或 数据库连接。
